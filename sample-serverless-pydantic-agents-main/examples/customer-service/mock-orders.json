@@ -1,0 +1,77 @@
+{
+    "ORD-001": {
+        "order_id": "ORD-001",
+        "customer_id": "customer-123",
+        "status": "shipped",
+        "tracking_number": "1Z999AA10123456784",
+        "carrier": "UPS",
+        "estimated_delivery": "2026-01-08",
+        "order_date": "2026-01-03",
+        "items": [
+            {
+                "name": "Laptop - Dell XPS 15",
+                "quantity": 1,
+                "price": 1299.99
+            },
+            {
+                "name": "Wireless Mouse",
+                "quantity": 1,
+                "price": 29.99
+            }
+        ],
+        "total": 1329.98,
+        "shipping_address": {
+            "street": "123 Main St",
+            "city": "Seattle",
+            "state": "WA",
+            "zip": "98101"
+        }
+    },
+    "ORD-002": {
+        "order_id": "ORD-002",
+        "customer_id": "customer-456",
+        "status": "processing",
+        "tracking_number": null,
+        "carrier": null,
+        "estimated_delivery": "2026-01-10",
+        "order_date": "2026-01-05",
+        "items": [
+            {
+                "name": "Mechanical Keyboard",
+                "quantity": 1,
+                "price": 149.99
+            }
+        ],
+        "total": 149.99,
+        "shipping_address": {
+            "street": "456 Oak Ave",
+            "city": "Portland",
+            "state": "OR",
+            "zip": "97201"
+        }
+    },
+    "ORD-003": {
+        "order_id": "ORD-003",
+        "customer_id": "customer-789",
+        "status": "delivered",
+        "tracking_number": "1Z999AA10123456785",
+        "carrier": "UPS",
+        "estimated_delivery": "2026-01-05",
+        "delivered_date": "2026-01-05",
+        "order_date": "2026-01-01",
+        "items": [
+            {
+                "name": "27-inch Monitor",
+                "quantity": 1,
+                "price": 399.99
+            }
+        ],
+        "total": 399.99,
+        "shipping_address": {
+            "street": "789 Pine Rd",
+            "city": "San Francisco",
+            "state": "CA",
+            "zip": "94102"
+        }
+    }
+}

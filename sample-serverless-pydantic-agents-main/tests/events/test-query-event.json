@@ -1,0 +1,12 @@
+{
+    "body": "{\"question\": \"What are the benefits of serverless architecture?\", \"context\": {}}",
+    "requestContext": {
+        "requestId": "test-request-123",
+        "authorizer": {
+            "userId": "user-test-456"
+        }
+    },
+    "headers": {
+        "Content-Type": "application/json"
+    }
+}

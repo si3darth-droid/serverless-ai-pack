@@ -1,0 +1,44 @@
+{
+    "Comment": "Multi-agent orchestration workflow",
+    "StartAt": "ProcessTasks",
+    "States": {
+        "ProcessTasks": {
+            "Type": "Task",
+            "Resource": "arn:aws:states:::lambda:invoke",
+            "Parameters": {
+                "FunctionName": "${OrchestratorFunctionArn}",
+                "Payload": {
+                    "execution_id.$": "$$.Execution.Id",
+                    "tasks.$": "$.tasks"
+                }
+            },
+            "Retry": [
+                {
+                    "ErrorEquals": [
+                        "States.TaskFailed"
+                    ],
+                    "IntervalSeconds": 2,
+                    "MaxAttempts": 3,
+                    "BackoffRate": 2
+                }
+            ],
+            "Catch": [
+                {
+                    "ErrorEquals": [
+                        "States.ALL"
+                    ],
+                    "Next": "HandleError"
+                }
+            ],
+            "Next": "Success"
+        },
+        "HandleError": {
+            "Type": "Fail",
+            "Error": "WorkflowFailed",
+            "Cause": "Agent orchestration failed"
+        },
+        "Success": {
+            "Type": "Succeed"
+        }
+    }
+}

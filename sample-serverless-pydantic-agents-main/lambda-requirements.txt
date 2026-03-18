@@ -1,0 +1,5 @@
+pydantic-ai-slim[bedrock]>=1.32.0
+boto3>=1.34.0
+aws-lambda-powertools>=2.30.0
+aws-xray-sdk>=2.15.0
+pydantic>=2.10.0

@@ -1,0 +1,24 @@
+{
+    "execution_id": "test-execution-123",
+    "user_id": "test-user-123",
+    "tasks": [
+        {
+            "task_type": "research",
+            "data": {
+                "topic": "AI trends in 2024"
+            }
+        },
+        {
+            "task_type": "analysis",
+            "data": {
+                "metrics": [
+                    10,
+                    20,
+                    30,
+                    40,
+                    50
+                ]
+            }
+        }
+    ]
+}
